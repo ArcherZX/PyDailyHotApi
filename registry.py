@@ -21,7 +21,7 @@ modules = [
 
 for module_name in modules:
     try:
-        module = importlib.import_module(f'views.{module_name}')
+        module = importlib.import_module(f'routers.{module_name}')
         if hasattr(module, 'router'):
             router.include_router(module.router)
     except Exception as e:
